@@ -1,14 +1,10 @@
-import React, { Children } from 'react'
-
-const DashboardLayout = () => {
+export default function DashboardLayout({ children }) {
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
+    <div className="dashboard">
       <header>
         <h1>Sentinel Dashboard</h1>
       </header>
-      <main>{Children}</main>
+      <main>{children}</main>
     </div>
-  )
+  );
 }
-
-export default DashboardLayout

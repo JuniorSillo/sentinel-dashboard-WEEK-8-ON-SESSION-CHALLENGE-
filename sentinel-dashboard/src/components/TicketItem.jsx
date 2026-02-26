@@ -1,13 +1,9 @@
-import React from 'react'
-
-const TicketItem = () => {
+export default function TicketItem({ ticket }) {
   return (
-    <div>
-      <p><strong>ID:</strong>{ticket.id}</p>
-      <p><strong>Descriptiopn:</strong>{ticket.description}</p>
-      <p><strong>Priority:</strong>{ticket.priority}</p>
+    <div className={`ticket-item ${ticket.priority === 'High' ? 'ticket-item-high' : ''}`}>
+      <p><strong>ID:</strong> {ticket.id}</p>
+      <p><strong>Desscription:</strong> {ticket.description}</p>
+      <p><strong>Priority:</strong> {ticket.priority}</p>
     </div>
-  )
+  );
 }
-
-export default TicketItem

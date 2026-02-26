@@ -1,15 +1,12 @@
-import React from 'react'
-import TicketItem from './TicketItem'
+import TicketItem from './TicketItem';
 
-const TicketList = () => {
+export default function TicketList({ tickets }) {
   return (
     <div>
-      <h2>Ticketss</h2>
-      {TicketList.map((ticket) => (
-        <TicketItem key={ticket.id} ticket={ticket}/>
+      <h2>Tickets</h2>
+      {tickets.map((ticket) => (
+        <TicketItem key={ticket.id} ticket={ticket} />
       ))}
     </div>
-  )
+  );
 }
-
-export default TicketList
